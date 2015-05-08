@@ -2,7 +2,8 @@
 	var boxes = document.getElementsByClassName('box');
 	var p1score = 0;
 	var p2score = 0;
-
+	var p1Image = "<img src=\"kiss.png\">";
+	var p2Image = "<img src=\"love.png\">"
 
 /* Player 1 and Player 2's name */
 	var p1name = "Player 1";
@@ -22,6 +23,10 @@ function player2name() {
 
 document.getElementsByClassName("player1name")[0].addEventListener("click", player1name);
 document.getElementsByClassName("player2name")[0].addEventListener("click", player2name);
+
+if (p1name === "J") {
+	p1Image = "<img src=\"tac.jpeg\">";
+} else console.log("nothing");
 
 /* end of Player 1 and Player 2's name */
 
@@ -45,8 +50,7 @@ document.getElementsByClassName("player2name")[0].addEventListener("click", play
 function init() {
 	var playercount = 1;
 	var counter = 0;
-	var p1Image = "<img src=\"tac.jpeg\">";
-	var p2Image = "<img src=\"tic.png\">"
+
 
 /* Moves */
 		for (var i = 0; i < boxes.length; i++) {
@@ -116,6 +120,12 @@ function init() {
 }
 /* end of Moves */
 
+
+// setTimeout(function() {
+//     setInterval(function() {
+//         $('#img1').attr('src',$('#img1').attr('src'))
+//     },1)
+// }, 2000)
 
 
 /* end of refresh the board */

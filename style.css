@@ -2,14 +2,29 @@
 	box-sizing: border-box;
 }
 
+body {
+	background-image: url("kaitokid.jpg");
+	background-repeat:no-repeat;
+}
+
 header{
 	text-align: center;
+	color: red;
+	font-family: 'Brush Script MT', cursive;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bold;
+	line-height: 28.7999992370605px;
+
 }
 
 .playBoard {
 	width: 300px;
 	height: 300px;
 	margin: 0 auto;
+	background-color: white;
+	cursor: url("love2.gif"), auto;
 }
 
 .box {
@@ -18,12 +33,38 @@ header{
 	border: 3px solid gray;
 	float: left;
 }
-.box: hover{
-	background-color: red;
+#button1:hover {
+	background-image: url("button1.gif");
+}
+#button2:hover {
+	background-image: url("button2.jpeg");
+}
+#button3:hover {
+	background-image: url("button3.gif");
+}
+#button4:hover {
+	background-image: url("button4.jpeg");
+}
+#button5:hover {
+	background-image: url("button5.gif");
+}
+#button6:hover {
+	background-image: url("button6.jpg");
+}
+#button7:hover {
+	background-image: url("button7.jpg");
+}
+#button8:hover {
+	background-image: url("button8.jpg");
+}
+#button9:hover {
+	background-image: url("button9.gif");
 }
 
 button {
-	width: 120px;
+	background-color: black;
+	color: white;
+	width: 75px;
 	height: 20px;
 	margin: 50px 0 0 20px;
 }
