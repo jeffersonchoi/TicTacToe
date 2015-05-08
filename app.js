@@ -2,6 +2,7 @@ var p1name = "Player 1";
 var p2name = "Player 2";
 var boxes = document.getElementsByClassName('box');
 var playercount = 1;
+var counter = 0;
 var p1Image = "<img src=\"tac.jpeg\">";
 var p2Image = "<img src=\"tic.png\">"
 
@@ -43,13 +44,15 @@ function playermove(e) {
   if (playercount % 2 !== 0) {
 			e.target.innerHTML = p1Image;
 			playercount++;
+			counter++
 
   } else {
 			e.target.innerHTML = p2Image;
 			playercount++;
+			counter++
 		}	
-
-if ((boxes[0].innerHTML === p1Image) && (boxes[1].innerHTML === p1Image) && (boxes[2].innerHTML === p1Image)) {
+/* Winning Situation */
+		if ((boxes[0].innerHTML === p1Image) && (boxes[1].innerHTML === p1Image) && (boxes[2].innerHTML === p1Image)) {
 		alert(p1name + " Wins");	
 	} else if ((boxes[3].innerHTML === p1Image) && (boxes[4].innerHTML === p1Image) && (boxes[5].innerHTML === p1Image)) {
 		alert(p1name + " Wins");		
@@ -81,12 +84,21 @@ if ((boxes[0].innerHTML === p1Image) && (boxes[1].innerHTML === p1Image) && (box
 		alert(p2name + " Wins");
 	} else if ((boxes[2].innerHTML === p2Image) && (boxes[4].innerHTML === p2Image) && (boxes[6].innerHTML === p2Image)) {
 		alert(p2name + " Wins");
-	}else console.log("It is a draw!");
-
+	} else if (counter === 9) {
+		alert("Its a tie!");
+	}
+/* Winning Situation */
 	e.target.removeEventListener('click', playermove);
 
 }
 /* end of Moves */
-/* Winning Method */
 
-/* End of winning method */
+/* Refresh Board */
+
+
+
+
+
+
+
+
