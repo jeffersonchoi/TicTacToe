@@ -2,8 +2,8 @@
 	var boxes = document.getElementsByClassName('box');
 	var p1score = 0;
 	var p2score = 0;
-	document.getElementsByClassName("player1score")[0].innerHTML = p1score;
-	document.getElementsByClassName("player2score")[0].innerHTML = p2score;
+
+
 /* Player 1 and Player 2's name */
 	var p1name = "Player 1";
 	var p2name = "Player 2";
@@ -25,6 +25,21 @@ document.getElementsByClassName("player2name")[0].addEventListener("click", play
 
 /* end of Player 1 and Player 2's name */
 
+
+function newGame() {
+	p1score = 0;
+	p2score = 0;
+	p1name = "Player 1";
+	p2name = "Player 2";
+	document.getElementsByClassName("player1name")[0].innerHTML = p1name;
+	document.getElementById("player1").innerHTML = p1name;
+	document.getElementsByClassName("player1name")[0].addEventListener("click", player1name);
+	document.getElementsByClassName("player2name")[0].addEventListener("click", player2name);
+	document.getElementById("player1score").innerHTML = p1score;
+	document.getElementById("player2score").innerHTML = p2score;
+	init();
+}
+document.getElementsByClassName("newGame")[0].addEventListener("click", newGame);
 
 /* Start Game */
 function init() {
@@ -73,6 +88,7 @@ function init() {
 			{ 
 			alert(p1name + " Wins");	
 			p1score++;
+				document.getElementById("player1score").innerHTML = p1score;
 			refreshBoard();
 			} 
 
@@ -88,6 +104,7 @@ function init() {
 			alert(p2name + " Wins");
 			refreshBoard();
 			p2score++;
+				document.getElementById("player2score").innerHTML = p2score;
 			} 
 	else if (counter === 9) {
 			alert("Its a tie!");
@@ -100,7 +117,6 @@ function init() {
 }
 /* end of Moves */
 
-/* refresh the board to empty board */
 
 
 /* end of refresh the board */
