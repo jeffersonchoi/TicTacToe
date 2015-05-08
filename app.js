@@ -26,20 +26,20 @@ document.getElementsByClassName("player2name")[0].addEventListener("click", play
 /* end of Player 1 and Player 2's name */
 
 
-function newGame() {
-	p1score = 0;
-	p2score = 0;
-	p1name = "Player 1";
-	p2name = "Player 2";
-	document.getElementsByClassName("player1name")[0].innerHTML = p1name;
-	document.getElementById("player1").innerHTML = p1name;
-	document.getElementsByClassName("player1name")[0].addEventListener("click", player1name);
-	document.getElementsByClassName("player2name")[0].addEventListener("click", player2name);
-	document.getElementById("player1score").innerHTML = p1score;
-	document.getElementById("player2score").innerHTML = p2score;
-	init();
-}
-document.getElementsByClassName("newGame")[0].addEventListener("click", newGame);
+// function newGame() {
+// 	p1score = 0;
+// 	p2score = 0;
+// 	p1name = "Player 1";
+// 	p2name = "Player 2";
+// 	document.getElementsByClassName("player1name")[0].innerHTML = p1name;
+// 	document.getElementById("player1").innerHTML = p1name;
+// 	document.getElementsByClassName("player1name")[0].addEventListener("click", player1name);
+// 	document.getElementsByClassName("player2name")[0].addEventListener("click", player2name);
+// 	document.getElementById("player1score").innerHTML = p1score;
+// 	document.getElementById("player2score").innerHTML = p2score;
+// 	init();
+// }
+// document.getElementsByClassName("newGame")[0].addEventListener("click", newGame);
 
 /* Start Game */
 function init() {
@@ -60,7 +60,6 @@ function init() {
 					boxes[i].innerHTML = "";
 					boxes[i].addEventListener('click', playermove);
 					counter = 0;
-					// init();
 					}	
 				}
 		document.getElementsByClassName("clearButton")[0].addEventListener("click", refreshBoard);
