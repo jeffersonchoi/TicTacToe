@@ -120,14 +120,6 @@ function init() {
 }
 /* end of Moves */
 
-
-// setTimeout(function() {
-//     setInterval(function() {
-//         $('#img1').attr('src',$('#img1').attr('src'))
-//     },1)
-// }, 2000)
-
-
 /* end of refresh the board */
 
 window.addEventListener("load", init);
